@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tonje Schjefstad">
+    <link href="./css/checkout.css" rel="stylesheet">
+    <meta name="keywords" content="rainwear, jackets, online shop">
+   <meta name="description" content="Checkout page for the online shop Rainy Days">
+    <script src="https://kit.fontawesome.com/bbeb57b99e.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" >
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" >
+    <title>Rainy Days - Checkout</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="./assets/logo.png" alt="Logo for Rainy Days" class="header-logo"></a>
+        </div>
+        <div class="header-right">
+            <div class="constant-icons"> 
+                <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
+                <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
+                <a href="checkout.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            
+            <div class="header-nav">
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
+                
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="shop-men.html">Men</a>
+                    <a href="shop-women.html">Women</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </div>   
+    </header>
+
+    <main>
+        <div class="progress">
+            <ul class="progress-list">
+                <li class="progress-item current-item">
+                    <span class="progress-count">1</span>
+                    <span class="progress-label">Checkout</span>
+                </li>
+                <li class="progress-item">
+                    <span class="progress-count">2</span>
+                    <span class="progress-label">Shipping</span>
+                </li>
+                <li class="progress-item">
+                    <span class="progress-count">1</span>
+                    <span class="progress-label">Success</span>
+                </li>
+            </ul>
+        </div>
+        
+        <h1 class="checkout-title">Checkout</h1>
+        <div class="summary">
+            <h2>Your Shopping Cart</h2>
+            <div class="summary-img">
+                <a href="jacket.html"><img src="./assets/jacket2.webp" alt="bestselling jacket"></a>
+            </div>
+         
+            <div class="summary-details">
+                <h3>Rainy Days Jacket</h3>
+                <p>Size: Medium</p>
+                <p>1.499,-</p>
+                <p><a href="checkout.html" aria-label="Delete from cart" title="Delete from cart"><i class="fa-regular fa-trash-can" style="color: grey;" ></i></a>
+                </p>
+            </div>
+                
+            <div class="summary-total">
+                <hr>
+                <p><b>TOTAL TO PAY </b></p> 
+                <p><b>1499,-</b></p>
+            </div>
+        </div>
+            
+        <div class="summary-container">
+            <section class="personal-information">
+                <h3>Personal Information</h3>
+                <form method="post">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" title="Enter your First name" name="firstname" required>
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" title="Enter your Last name" name="lastname" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" title="Enter your email" name="email" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" title="Enter your phone number" name="phone" required>
+
+                    <label for="address">Street Name</label>
+                    <input type="text" id="address" title="Enter your street name" name="adress" required>
+
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" id="zipcode" title="Enter your zip code" name="zipcode" required>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" title="Enter your city" name="city" required>
+                </form>
+            </section>
+            
+            <section class="payment-info">
+                <h3>Payment</h3>
+                <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-paypal" style="color:blue;"></i>
+                    <i class="fa fa-cc-klarna" style="color:orange;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" title="Enter the name on the card" name="cardname" required>
+                <label for="ccnum">Credit card number</label>
+                <input type="text" id="ccnum" title="Enter credit card number" name="cardnumber" required>
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" title="Enter expirary month" name="expmonth" required>
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" title="Enter expirary year" name="expyear" required>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" title="Enter CVV" name="cvv" required>
+            </section>
+            <a href="checkout-success.html" class="cta-checkout">Proceed to Checkout</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">    
+            <div>
+                <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+            </div>
+            <div class="newsletter-container">
+                <p><b> Stay updated with RAINY DAYS</b></p>
+                <p>Sign up for our newsletter and get 10% off your next purchase.</p>
+                <form>
+                    <input type="email" id="email" name="email" title="Enter your email" placeholder="your@email.com">
+                    <button aria-label="subscribe" id="subscribe" class="subscribe"><i class="fa-solid fa-paper-plane" style="color: grey;"></i></button>
+                </form>
+            </div>
+            
+            <div>
+                <p><b>Follow Us</b></p>
+                <a href="index.html" aria-label="link to facebook" title="Visit Us on Facebook"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a href="index.html" aria-label="link to x" title="Visit Us on X"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                <a href="index.html" aria-label="link to instagram" title="Visit Us on Instagram"><i class="fa-brands fa-instagram" style="color: white;"></i></a>
+                <a href="index.html" aria-label="link to tiktok" title="Visit us on tiktok"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
+            </div>
+            
+            <div>
+                <p><b>Shop</b></p>
+                <ul>
+                    <li><a href="shop-men.html">Men</a></li>
+                    <li><a href="shop-women.html">Women</a></li>
+                    <li><a href="index.html">Gift Card</a></li>
+                </ul>
+            </div>
+            <div>
+                <p><b>Help</b></p>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html">Order Status</a></li>
+                    <li><a href="index.html">Size Chart</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>

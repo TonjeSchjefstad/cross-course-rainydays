@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tonje Schjefstad">
+    <link href="./css/jacket.css" rel="stylesheet">
+    <meta name="keywords" content="rainwear, jackets, online shop">
+   <meta name="description" content="Explore the key features of our bestselling jacket">
+    <script src="https://kit.fontawesome.com/bbeb57b99e.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" >
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" >
+    <title>Rainy Days - Jacket</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="./assets/logo.png" alt="Logo for Rainy Days" class="header-logo"></a>
+        </div>
+        <div class="header-right">
+            <div class="constant-icons"> 
+                <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
+                <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
+                <a href="checkout.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="header-nav">
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
+                
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="shop-men.html">Men</a>
+                    <a href="shop-women.html">Women</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="./assets/jacket2.webp" alt="Grey Rainy Days jacket">
+            </div>
+            
+            <section class="product-details">
+                <h2>RAINY DAYS JACKET</h2>
+                <p>NOK 1.499,-</p>
+                <p><b>Size</b></p>
+                <div class="size-buttons">
+                    <button class="size-button" data-size="s">S</button>
+                    <button class="size-button" data-size="m">M</button>
+                    <button class="size-button" data-size="l">L</button>
+                    <button class="size-button" data-size="xl">XL</button>
+                    <button class="size-button" data-size="xxl">XXL</button>
+                </div>
+            
+                <div class="button-container">
+                    <a href="checkout.html" class="cta"><b>Add to cart</b></a>
+                    <div class="heart-container">
+                        <i id="heart"  class="far fa-heart"></i>
+                    </div>
+                </div>
+                <hr>
+                <details open>
+                    <summary><b>Description</b></summary>
+                    <p>Embrace every adventure with our All-Weather Rain Jacket, designed specifically for outdoor enthusiasts who refuse to let a little rain dampen their spirits. Whether you're hiking through misty mountains, navigating urban streets on a rainy day, or enjoying a weekend camping trip, this jacket is your perfect companion. </p>
+                </details>
+    
+                <details>
+                    <summary><b>Key features</b></summary>
+                    <ul>
+                        <li><b>Superior Waterproofing:</b> Crafted from cutting-edge waterproof fabric, this jacket features a high hydrostatic head rating, ensuring that you remain completely dry even in the heaviest downpours. The fabric is also treated with a durable water-repellent (DWR) finish, allowing water to bead and roll off, keeping you comfortable throughout your activities.</li>
+                        <li><b>Breathable Design:</b> Say goodbye to discomfort! The jacket’s breathable membrane allows moisture and heat to escape, preventing that clammy feeling that often accompanies traditional rain gear. You can enjoy your hike or commute without worrying about overheating.</li>
+                        <li><b>Lightweight & Packable:</b> Weighing in at just a fraction of traditional rain jackets, our All-Weather Rain Jacket is easy to pack and carry. It conveniently folds into its own pocket, making it a perfect addition to your travel gear or a lightweight layer to toss in your daypack.</li>
+                        <li><b>Customizable Fit:</b> Equipped with an adjustable, cinchable hood and velcro cuffs, you can easily tailor the fit to your preference. This ensures that you’re protected from wind and rain, keeping you warm and dry without sacrificing mobility.</li>
+                        <li><b>Practical Storage Solutions:</b> With multiple zippered pockets—two side pockets and an internal chest pocket—this jacket provides ample space to securely store your essentials. Keep your phone, wallet, and keys safe and within easy reach while you're on the go.</li>
+                        <li><b>Stylish Versatility:</b> Available in an array of colors and sizes, this jacket is as stylish as it is functional. Its sleek design means it easily transitions from rugged outdoor settings to casual urban outings, making it a staple in any wardrobe.</li>
+                    </ul>
+                </details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">    
+            <div>
+                <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+            </div>
+            <div class="newsletter-container">
+                <p><b> Stay updated with RAINY DAYS</b></p>
+                <p>Sign up for our newsletter and get 10% off your next purchase.</p>
+                <form>
+                    <input type="email" id="email" name="email" title="Enter your email" placeholder="your@email.com">
+                    <button aria-label="subscribe" id="subscribe" class="subscribe"><i class="fa-solid fa-paper-plane" style="color: grey;"></i></button>
+                </form>
+            </div>
+            
+            <div>
+                <p><b>Follow Us</b></p>
+                <a href="index.html" aria-label="link to facebook" title="Visit Us on Facebook"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a href="index.html" aria-label="link to x" title="Visit Us on X"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                <a href="index.html" aria-label="link to instagram" title="Visit Us on Instagram"><i class="fa-brands fa-instagram" style="color: white;"></i></a>
+                <a href="index.html" aria-label="link to tiktok" title="Visit us on tiktok"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
+            </div>
+            
+            <div>
+                <p><b>Shop</b></p>
+                <ul>
+                    <li><a href="shop-men.html">Men</a></li>
+                    <li><a href="shop-women.html">Women</a></li>
+                    <li><a href="index.html">Gift Card</a></li>
+                </ul>
+            </div>
+            <div>
+                <p><b>Help</b></p>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html">Order Status</a></li>
+                    <li><a href="index.html">Size Chart</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
