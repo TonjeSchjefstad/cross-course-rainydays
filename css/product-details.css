@@ -61,7 +61,7 @@ select, button {
 }
 
 button {
-    background-color: #E8CE5F;
+    background-color:var(--accent);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #74600D;
+    background-color: var(--accent-hover);
 }
 
 .original-price {
@@ -90,9 +90,10 @@ button:hover {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #545F71;
-    color: white;
-    padding: 20px;
+    background-color: var(--accent);
+    color: black;
+    font-weight: bold;
+    padding: 20px 40px;
     border-radius: 20px;
     z-index: 9999;
     display: none;
