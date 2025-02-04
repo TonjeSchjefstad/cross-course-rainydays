@@ -61,7 +61,7 @@ function displayCart () {
     cartHTML +=`
         <div class="cart-summary">
             <p><strong>Total Price: $${totalPrice.toFixed(2)}</strong></p>
-            <a href="checkout.html" class="proceed-checkout">Proceed to Checkout </a>
+            <a href="checkout.html" class="cta-small">Proceed to Checkout </a>
         </div>
     `;
 

@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Tonje Schjefstad">
-    <link href="./css/product-details.css" rel="stylesheet">
-    <meta name="keywords" content="rainwear, jackets, online shop">
-   <meta name="description" content="Explore the key features of our bestselling jacket">
-    <script src="https://kit.fontawesome.com/bbeb57b99e.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" >
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" >
-    <title>Rainy Days - Product Details</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tonje Schjefstad">
+        <link href="./css/product-details.css" rel="stylesheet">
+        <meta name="keywords" content="rainwear, jackets, online shop">
+    <meta name="description" content="Explore the key features of our bestselling jacket">
+        <script src="https://kit.fontawesome.com/bbeb57b99e.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" >
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" >
+        <title>Rainy Days - Product Details</title>
+    </head>
 
-<body>
-    <header>
-        <div>
-            <a href="index.html"><img src="./assets/logo.png" alt="Logo for Rainy Days" class="header-logo"></a>
-        </div>
-        <div class="header-right">
-            <div class="constant-icons"> 
-                <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
-                <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
-                <a href="cart.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></a>
+    <body>
+        <header>
+            <div>
+                <a href="index.html"><img src="./assets/logo.png" alt="Logo for Rainy Days" class="header-logo"></a>
             </div>
-            <div class="header-nav">
-                <input type="checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
-                
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="shop.html" class="active">Shop</a>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact Us</a>
-                </nav>
+            <div class="header-right">
+                <div class="constant-icons"> 
+                    <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
+                    <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
+                    <a href="cart.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></span></a>
+                </div>
+                <div class="header-nav">
+                    <input type="checkbox" id="menu-checkbox">
+                    <label for="menu-checkbox" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
+                    
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html" class="active">Shop</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <a href="shop.html" class="back-button">- Back to Shop</a>
-        <div id="product-detail-container">
-           
-        </div>
-
-        <div id="cart-popup" class="cart-popup">
-            <div class="cart-popup-content">
-                <p id="popup-message"> Item added to cart! </p>
-
+        <main>
+            <a href="shop.html" class="back-button">- Back to Shop</a>
+            <div id="product-detail-container"></div>
+            <div id="cart-popup" class="cart-popup">
+                <div class="cart-popup-content">
+                    <p id="popup-message"> Item added to cart! </p>
+                </div>
             </div>
+        </main>
 
-        </div>
-       
-    </main>
-
-    <footer>
-        <div>
-            <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
-        </div>
-        <div>
-            <a href="policy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <p>@2025 Rainy Days Clothing. All Rights reserved.</p>    
-        </div>
-    </footer>
+        <footer>
+            <div>
+                <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+            </div>
+            <div>
+                <a href="policy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <p>@2025 Rainy Days Clothing. All Rights reserved.</p>    
+            </div>
+        </footer>
     <script src="./js/product-details.js"></script>
     <script type="module" src="js/cart-count.js"></script>
-</body>
+    </body>
+</html>

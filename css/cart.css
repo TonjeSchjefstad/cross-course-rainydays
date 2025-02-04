@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./variables.css");
 
 .checkout-title {
     text-align: center;
@@ -35,29 +36,6 @@
 
 .cart-item button:hover {
   background-color: rgb(241, 100, 100);
-}
-
-.proceed-checkout {
-  display: inline-block;
-  color: black;
-  background-color: #E8CE5F;
-  padding: 15px 20px;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 1px 1px 2px lightgrey;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  margin: 10px auto;
-  width: 50%;
-}
-
-.proceed-checkout:hover {
-  background-color: #f0d663;
-  text-decoration: underline;
-  box-shadow: 1px 1px 2px  #74600D; 
-  border-color: #74600D;
 }
 
 .cart-summary {

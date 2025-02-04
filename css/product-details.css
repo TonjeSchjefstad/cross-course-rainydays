@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./variables.css");
 
 .back-button {
     font-size: 0.8rem;
@@ -124,9 +125,5 @@ button:hover {
 
     #add-to-cart {
         width: 200px;
-    }
-
-    #cart-popup {
-        
     }
 }

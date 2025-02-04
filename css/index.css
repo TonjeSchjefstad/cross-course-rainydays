@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./variables.css");
 
 .homepage {
     background-image: url(../assets/twomen.webp);
@@ -191,11 +192,20 @@
         flex-direction: column
     }
 }
-    
 
+.product-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+}
 
 .product {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
     border: 1px solid lightgrey;
     border-radius: 8px;
@@ -203,14 +213,12 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
+    margin-top: 10px;
 }
+
 .product:hover {
-    border: 1px solid grey;
+    transform: translateY(-5px);
+    border: 1px solid rgb(175, 158, 0);
 }
 
 .product img {
@@ -226,27 +234,5 @@
 .product p {
     font-size: 1rem;
     color: #555;
-    margin: 0,5rem;
-}
-
-.view-product-button {
-    width: 80%;
-    background-color: #E8CE5F;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-decoration: none;
-    
-}
-
-.view-product-button:hover {
-    background-color: #74600D;
+    margin: 0.5rem;
 }

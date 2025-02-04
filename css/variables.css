@@ -1,0 +1,12 @@
+:root {
+    --primary-text: black;
+    --secondary-text: white;
+    --accent: #E8CE5F ;
+    --accent-hover: #f8e798 ;
+    --accent-hover-shadow: #74600D;
+    --footer-bg: #545F71;
+    --space-small:10px;
+    --space-medium: 20px;
+    --space-large: 40px;
+    --space-xlarge: 60px;
+}

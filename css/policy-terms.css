@@ -1,0 +1,18 @@
+@import url("./reset.css");
+@import url("./variables.css");
+
+h1 {
+    margin-bottom: 2px; 
+}
+
+h2 {
+    margin-bottom: 2px;
+}
+
+p {
+    margin-top: 0;
+}
+
+section {
+    margin: 50px 10px ;
+}
