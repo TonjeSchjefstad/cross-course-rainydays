@@ -1,5 +1,3 @@
-
-
 //Fetching product details
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
@@ -7,6 +5,9 @@ const productId = urlParams.get("id");
 let product = null;
 
 async function fetchProductDetails() {
+    const loadingMessage = document.getElementById("loading");
+    loadingMessage.style.display = "block";
+
     try{
         const response = await fetch("https://v2.api.noroff.dev/rainy-days");
         const data = await response.json();
@@ -21,6 +22,8 @@ async function fetchProductDetails() {
     } catch (error) {
         console.error("An error occurred while fetching product details", error);
         document.getElementById("product-detail-container").innerHTML = "<p>An error occurred while fetching product details</p>";
+    } finally {
+        loadingMessage.style.display = "none";
     }
 }
 

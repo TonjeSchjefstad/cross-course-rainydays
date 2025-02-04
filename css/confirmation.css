@@ -46,3 +46,7 @@ hr {
 .checkout a:hover {
     text-decoration: underline;
 }
+
+#order-number {
+    font-weight: bold;
+}

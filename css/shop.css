@@ -183,6 +183,18 @@ background-image: url(../assets/yellowjacket.jpg);
     margin: 5px;
 }
 
+/*Loading spinner animation */
+#loading {
+    border: 8px solid lightgray;
+    border-top: 8px solid #545F71;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    display: block;
+    margin: 0 auto;
+  }
+
 @media (max-width: 800px) {
     #filter-container {
       flex-direction: column;
@@ -198,4 +210,3 @@ background-image: url(../assets/yellowjacket.jpg);
       padding: 10px;
     }
 }
-

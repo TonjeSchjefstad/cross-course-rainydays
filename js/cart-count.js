@@ -1,5 +1,4 @@
-// Count items in cart and displays it in the header
-
+// Count the number of items in cart and displays it in the header
 function updateCartCount () {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartCount = document.getElementById("cart-count");
