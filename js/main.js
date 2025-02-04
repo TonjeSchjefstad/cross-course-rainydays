@@ -1,4 +1,6 @@
 
+
+// Index Page - Display of bestseller items
 const bestsellerSection = document.getElementById('bestseller-list');
 
 async function fetchBestsellers() {

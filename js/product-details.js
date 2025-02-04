@@ -1,9 +1,5 @@
-
-
-
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
-console.log("Product ID", productId);
 
 let product = null;
 
@@ -11,10 +7,8 @@ async function fetchProductDetails() {
     try{
         const response = await fetch("https://v2.api.noroff.dev/rainy-days");
         const data = await response.json();
-        console.log("API response", data);
     
         const product = data.data.find (product => product.id === productId);
-        console.log("Comparing", productId, "with", product ? product.id : "n");
 
         if (product) {
         displayProductDetails(product);
@@ -67,7 +61,7 @@ function displayProductDetails(product) {
 
 }
 
-//add to cart 
+//add to cart function
 function addToCart(product) {
     const selectedSize = document.getElementById("size-select").value;
 

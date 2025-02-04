@@ -1,7 +1,7 @@
 
 let allProducts = [];
 
-//fetching products
+//fetching products from API
 async function fetchProducts () {
     try {
         const response = await fetch ("https://v2.api.noroff.dev/rainy-days");
@@ -10,7 +10,6 @@ async function fetchProducts () {
         }
         
         const data = await response.json();
-        console.log("API respons", data);
 
         return data.data || []; 
     }
@@ -73,8 +72,6 @@ document.getElementById("clear-filters").addEventListener("click", clearFilters)
 function applyFilters () {
     let filteredProducts = allProducts;
 
-    console.log("before filtering, products length", filteredProducts.length);
-
     //size filter
     const sizeFilter = document.getElementById("size-filter").value;
     if (sizeFilter !== "all") {
@@ -95,11 +92,9 @@ function applyFilters () {
     const saleFilter = document.getElementById("sale-filter").value;
     if (saleFilter === "yes") {
         filteredProducts = filteredProducts.filter(product => product.onSale === true);
-        console.log ("filtered by sale", filteredProducts.length);
     }
     else if (saleFilter === "no") {
         filteredProducts = filteredProducts.filter(product => product.onSale === false);
-        console.log ("filtered by sale", filteredProducts.length);
     }
 
     //Gender Filter
@@ -108,22 +103,18 @@ function applyFilters () {
         filteredProducts = filteredProducts.filter(product => {
             return product.gender && product.gender.toLowerCase() === genderFilter.toLowerCase();
         });
-        console.log("filtered by gender", filteredProducts.length);
     }
 
     //Sorting 
     const sortOption = document.getElementById("sort-options").value;
     if (sortOption === "favorite") {
         filteredProducts = filteredProducts.filter(product => product.favorite === true);
-        console.log("filtered by favorite", filteredProducts.length);
     }
     else if (sortOption === "price-low") {
         filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
-        console.log("sorted by price from low to high", filteredProducts.length);
     }
     else if (sortOption === "price-high") {
         filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
-        console.log("sorted by price from high to low", filteredProducts.length);
     }
 
     //Counting products
@@ -131,7 +122,6 @@ function applyFilters () {
     productCount.textContent = filteredProducts.length;
 
     displayProducts(filteredProducts);
-    console.log("after filtering, products length", filteredProducts.length);
 }
 // Clear filters button 
 function clearFilters () {
