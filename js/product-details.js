@@ -1,3 +1,4 @@
+//Fetching product details
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 
@@ -21,6 +22,7 @@ async function fetchProductDetails() {
     }
 }
 
+//Displaying product details
 function displayProductDetails(product) {
   const container = document.getElementById("product-detail-container");
 
@@ -28,7 +30,7 @@ function displayProductDetails(product) {
     return `<option value="${size}">${size}</option>`;
     }).join("");
     
-    //discount?
+    //discounted product?
     const isDiscounted = product.discountedPrice && product.discountedPrice < product.price;
 
 
@@ -82,7 +84,7 @@ function addToCart(product) {
     updateCartCount();
 }
 
-
+//Pop up message when adding item to cart
 function showCartPopup(message) {
     const popupMessage = document.getElementById("popup-message");
     const popup = document.getElementById("cart-popup");
@@ -95,22 +97,5 @@ function showCartPopup(message) {
         popup.style.display = "none";
     }, 2000);
 }
-
-
-function toggleFavorite (product) {
-    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const isFavorite = favorites.some(favorite => favorite.id === product.id);
-
-    if (isFavorite) {
-        favorites = favorites.filter(favorite => favorite.id !== product.id);
-        alert(`${product.title} removed from favorites`);
-    } else {
-        favorites.push(product);
-        alert(`${product.title} added to favorites`);
-    }
-
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-}
-
 
 document.addEventListener("DOMContentLoaded", fetchProductDetails);
