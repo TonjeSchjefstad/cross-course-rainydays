@@ -26,17 +26,16 @@
             <div class="constant-icons"> 
                 <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
                 <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
-                <a href="checkout.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></a>
             </div>
             <div class="header-nav">
                 <input type="checkbox" id="menu-checkbox">
                 <label for="menu-checkbox" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
                 <nav>
                     <a href="index.html">Home</a>
-                    <a href="shop-men.html">Men</a>
-                    <a href="shop-women.html">Women</a>
+                    <a href="shop.html">Shop</a>
                     <a href="about.html">About Us</a>
-                    <a href="contact.html"><b>Contact Us</b></a>
+                    <a href="contact.html" class="active">Contact Us</a>
                 </nav>
             </div>
         </div> 
@@ -86,44 +85,14 @@
     </main>
     
     <footer>
-        <div class="footer-container">    
-            <div>
-                <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
-            </div>
-            <div class="newsletter-container">
-                <p><b> Stay updated with RAINY DAYS</b></p>
-                <p>Sign up for our newsletter and get 10% off your next purchase.</p>
-                <form>
-                    <input type="email" id="email" name="email" title="Enter your email" placeholder="your@email.com">
-                    <button aria-label="subscribe" id="subscribe" class="subscribe"><i class="fa-solid fa-paper-plane" style="color: grey;"></i></button>
-                </form>
-            </div>
-            
-            <div>
-                <p><b>Follow Us</b></p>
-                <a href="index.html" aria-label="link to facebook" title="Visit Us on Facebook"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                <a href="index.html" aria-label="link to x" title="Visit Us on X"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
-                <a href="index.html" aria-label="link to instagram" title="Visit Us on Instagram"><i class="fa-brands fa-instagram" style="color: white;"></i></a>
-                <a href="index.html" aria-label="link to tiktok" title="Visit us on tiktok"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
-            </div>
-            
-            <div>
-                <p><b>Shop</b></p>
-                <ul>
-                    <li><a href="shop-men.html">Men</a></li>
-                    <li><a href="shop-women.html">Women</a></li>
-                    <li><a href="index.html">Gift Card</a></li>
-                </ul>
-            </div>
-            <div>
-                <p><b>Help</b></p>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="index.html">Order Status</a></li>
-                    <li><a href="index.html">Size Chart</a></li>
-                </ul>
-            </div>
+        <div>
+            <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+        </div>
+        <div>
+                <a href="policy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <p>@2025 Rainy Days Clothing. All Rights reserved.</p>    
         </div>
     </footer>
+    <script type="module" src="js/cart-count.mjs"></script>
 </body>

@@ -26,7 +26,7 @@
             <div class="constant-icons"> 
                 <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
                 <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
-                <a href="checkout.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                 <a href="cart.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></a>
             </div>
             
             <div class="header-nav">
@@ -35,8 +35,7 @@
                 
                 <nav>
                     <a href="index.html">Home</a>
-                    <a href="shop-men.html">Men</a>
-                    <a href="shop-women.html">Women</a>
+                    <a href="shop.html">Shop</a>
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact Us</a>
                 </nav>
@@ -45,44 +44,15 @@
     </header>
 
     <main>
-        <div class="progress">
-            <ul class="progress-list">
-                <li class="progress-item current-item">
-                    <span class="progress-count">1</span>
-                    <span class="progress-label">Checkout</span>
-                </li>
-                <li class="progress-item">
-                    <span class="progress-count">2</span>
-                    <span class="progress-label">Shipping</span>
-                </li>
-                <li class="progress-item">
-                    <span class="progress-count">1</span>
-                    <span class="progress-label">Success</span>
-                </li>
-            </ul>
-        </div>
+        <div class="progressbar">
+			<div class="progress" id="progress"></div>
+			<div class="progress-step" data-title="Cart"></div>
+			<div class="progress-step" data-title="Checkout"></div>
+			<div class="progress-step" data-title="Confirmation"></div>
+		</div>
         
         <h1 class="checkout-title">Checkout</h1>
-        <div class="summary">
-            <h2>Your Shopping Cart</h2>
-            <div class="summary-img">
-                <a href="jacket.html"><img src="./assets/jacket2.webp" alt="bestselling jacket"></a>
-            </div>
-         
-            <div class="summary-details">
-                <h3>Rainy Days Jacket</h3>
-                <p>Size: Medium</p>
-                <p>1.499,-</p>
-                <p><a href="checkout.html" aria-label="Delete from cart" title="Delete from cart"><i class="fa-regular fa-trash-can" style="color: grey;" ></i></a>
-                </p>
-            </div>
-                
-            <div class="summary-total">
-                <hr>
-                <p><b>TOTAL TO PAY </b></p> 
-                <p><b>1499,-</b></p>
-            </div>
-        </div>
+        <div id = "checkout-container"></div>
             
         <div class="summary-container">
             <section class="personal-information">
@@ -131,49 +101,73 @@
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" title="Enter CVV" name="cvv" required>
             </section>
-            <a href="checkout-success.html" class="cta-checkout">Proceed to Checkout</a>
+            
+            <form action="/submit-order" method="post" id="checkout-form">
+                <div class="checkbox-group">
+                    <label for="accept-terms">
+                        <input type="checkbox" id="accept-terms" name="accept-terms" required>  
+                        I accept <a href="#" id="terms-link">  Terms and Conditions</a>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label for="privacy-policy"> 
+                        <input type="checkbox" id="privacy-policy" name="privacy-policy" required>  
+                    I accept <a href="#" id="privacy-link">  Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <div class="buttons-container">
+                    <button type="submit" class="cta proceed-checkout" id="purchase-button"> Complete Purchase</button>
+                </div>
+            </form>
+
+
+            <div id="terms-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-terms">&times;</span>
+                    <h2>Terms and Conditions</h2>
+                    <p>By placing an order with Rainy Days, you agree to the following terms and conditions:</p>
+                    <ul>
+                        <li>Payment is due upon order confirmation.</li>
+                        <li>Orders are shipped within 1-3 business days.</li>
+                        <li>Shipping costs are calculated at checkout.</li>
+                        <li>Items can be returned within 30 days of purchase.</li>
+                        <li>Refunds are processed within 5-7 business days.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div id="privacy-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-privacy">&times;</span>
+                    <h2>Privacy Policy</h2>
+                    <p>At Rainy Days, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website and make purchases from our online st
+                    ore. By using our services, you agree to the collection and use of information in accordance with this policy.</p>
+
+                    <p>We may share your information with trusted third parties who assist us in operating our website, processing payments, and fulfilling orders. These third parties are obligated to keep your information confidential and only use it for the purposes outlined in this Privacy Policy.We may also disclose your information if required by law or in response to a valid legal request.</p>
+
+                    <p>We take reasonable steps to protect your personal information from unauthorized access, use, or disclosure. However, no method of data transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
+        
+                    <p> We use cookies and similar tracking technologies to enhance your user experience, analyze website traffic, and personalize content. You can adjust your browser settings to refuse cookies, but doing so may limit your ability to use certain features of our website.</p>
+
+                    <p>Thank you for trusting Rainy Days with your personal information. We are committed to ensuring your privacy and providing a secure online shopping experience.</p>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer-container">    
-            <div>
-                <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
-            </div>
-            <div class="newsletter-container">
-                <p><b> Stay updated with RAINY DAYS</b></p>
-                <p>Sign up for our newsletter and get 10% off your next purchase.</p>
-                <form>
-                    <input type="email" id="email" name="email" title="Enter your email" placeholder="your@email.com">
-                    <button aria-label="subscribe" id="subscribe" class="subscribe"><i class="fa-solid fa-paper-plane" style="color: grey;"></i></button>
-                </form>
-            </div>
-            
-            <div>
-                <p><b>Follow Us</b></p>
-                <a href="index.html" aria-label="link to facebook" title="Visit Us on Facebook"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                <a href="index.html" aria-label="link to x" title="Visit Us on X"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
-                <a href="index.html" aria-label="link to instagram" title="Visit Us on Instagram"><i class="fa-brands fa-instagram" style="color: white;"></i></a>
-                <a href="index.html" aria-label="link to tiktok" title="Visit us on tiktok"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
-            </div>
-            
-            <div>
-                <p><b>Shop</b></p>
-                <ul>
-                    <li><a href="shop-men.html">Men</a></li>
-                    <li><a href="shop-women.html">Women</a></li>
-                    <li><a href="index.html">Gift Card</a></li>
-                </ul>
-            </div>
-            <div>
-                <p><b>Help</b></p>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="index.html">Order Status</a></li>
-                    <li><a href="index.html">Size Chart</a></li>
-                </ul>
-            </div>
+        <div>
+            <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+        </div>
+        <div>
+            <a href="policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <p>@2025 Rainy Days Clothing. All Rights reserved.</p>    
         </div>
     </footer>
+<script src="./js/checkout.js"></script>
+<script type="module" src="js/cart-count.mjs"></script>
+
 </body>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tonje Schjefstad">
+    <link href="./css/confirmation.css" rel="stylesheet">
+    <meta name="keywords" content="rainwear, jackets, online shop">
+   <meta name="description" content="Final checkout page for the online shop Rainy Days">
+    <script src="https://kit.fontawesome.com/bbeb57b99e.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" >
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" >
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" >
+    <title>Rainy Days - Order Confirmation</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="./assets/logo.png" alt="Logo for Rainy Days" class="header-logo"></a>
+        </div>
+
+        <div class="header-right">
+            <div class="constant-icons"> 
+                <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
+                <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
+                 <a href="cart.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></a>
+            </div>
+            
+            <div class="header-nav">
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="progressbar">
+			<div class="progress" id="progress"></div>
+			<div class="progress-step" data-title="Cart"></div>
+			<div class="progress-step" data-title="Checkout"></div>
+			<div class="progress-step" data-title="Confirmation"></div>
+		</div>
+
+
+
+        <div class="checkout">
+            <img src="./assets/checkmark.png" alt="Checkout complete">
+        </div>
+       <section class="checkout">
+            <h1>Thank You For Your Purchase!</h1>
+            <p><b>Your order number is: FED12024</b></p>
+            <p>You will receive a confirmation email shortly with your order details and tracking information. If you have any questions or need to make changes, feel free to contact our support team.</p>
+            <hr>
+
+            <h2>Explore More</h2>
+            <p>While you wait for your order, check out these options:</p>
+            <a href="shop-men.html">Men's Collection</a>
+            <a href="shop-men.html">Women's Collection</a>
+            <hr>
+
+            <h3>Need Help?</h3>
+            <p>Our customer service team is here to assist you.</p>
+            <p><b>support@rainydays.com</b></p>
+            <p><b>+47 123 45 678</b></p>
+       </section>
+    </main>
+
+    <footer>
+        <div>
+            <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+        </div>
+        <div>
+            <a href="policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <p>@2025 Rainy Days Clothing. All Rights reserved.</p>    
+        </div>
+    </footer>
+    <script src="./js/confirmation.js"></script>
+</body>

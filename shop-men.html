@@ -26,7 +26,7 @@
             <div class="constant-icons"> 
                 <a href="index.html" aria-label="Your account"><i class="fa-solid fa-user"></i> </a>
                 <a href="index.html" aria-label="Your favorites"><i class="fa-solid fa-heart"></i></a>
-                <a href="checkout.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.html" aria-label="View your Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></a>
             </div>
             <div class="header-nav">
                 <input type="checkbox" id="menu-checkbox">
@@ -34,8 +34,7 @@
                 
                 <nav>
                     <a href="index.html">Home</a>
-                    <a href="shop-men.html"><b>Men</b></a>
-                    <a href="shop-women.html">Women</a>
+                    <a href="shop.html" class="active">Shop</a>
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact Us</a>
                 </nav>
@@ -49,87 +48,86 @@
             <h1>Men’s Rainwear</h1>
             <p>Our rain jackets are designed for men who value performance and style. With a tailored fit, durable materials, and all-weather protection, they offer comfort, mobility, and a sleek look—perfect for any outdoor adventure. Stay dry, move freely, and tackle the elements with confidence.</p>
             <hr>
-            <p>7 products</p>
+            <div id="filter-container">
+                <div class="filter-item">
+                    <label for="sort-filter">Sort by</label>
+                    <select id="sort-options" class="filter">
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="favorite">Favorites</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="size-filter">Size</label>
+                    <select id="size-filter" class="filter">
+                        <option value="all">Size</option>
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="color-filter">Color</label>
+                    <select id="color-filter" class="filter">
+                        <option value="all">Color</option>
+                        <option value="gray">Gray</option>
+                        <option value="red">Red</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="purple">Purple</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">   
+                    <label for="sale-filter">On Sale</label>
+                    <select id="sale-filter" class="filter">
+                        <option value="all">On Sale</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="gender-filter">Gender</label>
+                    <select id="gender-filter" class="filter">
+                        <option value="all">Gender</option>
+                        <option value="male">Men</option>
+                        <option value="female">Women</option>
+                    </select>
+                </div>
+
+                
+                <button id="clear-filters" class="clear-button">Clear filters</button>
+                
+            </div>
+
+            <p><span id="product-count">12</span> products</p>
         </section>
 
-        <section class="featured">
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket1.webp" alt="Jacket with orange arms and grey body"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket2.webp" alt="grey lightweight jacket"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket3.webp" alt="red lightweight jacket"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket4.webp" alt="black jacket with yellow and white details"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket5.webp" alt="grey hiking jacket"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket6.webp" alt="black jacket with grey details"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
-            <div class="products">
-                <a href="jacket.html"><img src="./assets/jacket7.webp" alt="army green fleece jacket"></a>
-                <h3>Rainy Day Jacket</h3>
-                <p>NOK 1.499,-</p>
-            </div>
+        <section class="product-list" id="product-list">
         </section>
+        <div id="loading"></div>
+
     </main>
     
     <footer>
-        <div class="footer-container">    
-            <div>
-                <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
-            </div>
-            <div class="newsletter-container">
-                <p><b> Stay updated with RAINY DAYS</b></p>
-                <p>Sign up for our newsletter and get 10% off your next purchase.</p>
-                <form>
-                    <input type="email" id="email" name="email" title="Enter your email" placeholder="your@email.com">
-                    <button aria-label="subscribe" id="subscribe" class="subscribe"><i class="fa-solid fa-paper-plane" style="color: grey;"></i></button>
-                </form>
-            </div>
-            
-            <div>
-                <p><b>Follow Us</b></p>
-                <a href="index.html" aria-label="link to facebook" title="Visit Us on Facebook"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                <a href="index.html" aria-label="link to x" title="Visit Us on X"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
-                <a href="index.html" aria-label="link to instagram" title="Visit Us on Instagram"><i class="fa-brands fa-instagram" style="color: white;"></i></a>
-                <a href="index.html" aria-label="link to tiktok" title="Visit us on tiktok"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
-            </div>
-            
-            <div>
-                <p><b>Shop</b></p>
-                <ul>
-                    <li><a href="shop-men.html">Men</a></li>
-                    <li><a href="shop-women.html">Women</a></li>
-                    <li><a href="index.html">Gift Card</a></li>
-                </ul>
-            </div>
-            <div>
-                <p><b>Help</b></p>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="index.html">Order Status</a></li>
-                    <li><a href="index.html">Size Chart</a></li>
-                </ul>
-            </div>
+        <div>
+            <img src="./assets/whitelogo.webp" alt="Logo and slogan for Rainy Days" class="logo-footer">
+        </div>
+        <div>
+            <a href="policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <p>@2025 Rainy Days Clothing. All Rights reserved.</p>    
         </div>
     </footer>
+    <script src="./js/shop-men.js"></script>
+    <script type="module" src="js/cart-count.mjs"></script>
 </body>
+</html>
