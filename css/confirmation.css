@@ -50,3 +50,23 @@ hr {
 #order-number {
     font-weight: bold;
 }
+
+.homepage-button {
+   display: block;
+   width: 20%;
+   margin: 0 auto;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 8px;
+   text-align: center;
+   font-size: 1.2rem;
+   color: black;
+   background-color: var(--accent);
+   margin-bottom: 50px;
+}
+
+@media (max-width:600px){ 
+    .homepage-button { 
+    width: 80%;
+    }
+}

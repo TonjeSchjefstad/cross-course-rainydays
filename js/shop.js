@@ -68,10 +68,10 @@ async function loadProducts () {
 
 //Filtering 
 document.getElementById("sort-filter").addEventListener("change", applyFilters);
-document.getElementById("size-filter").addEventListener("input", applyFilters);
-document.getElementById("color-filter").addEventListener("input", applyFilters);
-document.getElementById("sale-filter").addEventListener("input", applyFilters);
-document.getElementById("gender-filter").addEventListener("input", applyFilters);
+document.getElementById("size-filter").addEventListener("change", applyFilters);
+document.getElementById("color-filter").addEventListener("change", applyFilters);
+document.getElementById("sale-filter").addEventListener("change", applyFilters);
+document.getElementById("gender-filter").addEventListener("change", applyFilters);
 document.getElementById("clear-filters").addEventListener("click", clearFilters);
 
 function applyFilters () {
@@ -111,7 +111,7 @@ function applyFilters () {
     }
 
     //Sorting 
-    const sortOption = document.getElementById("sort-options").value;
+    const sortOption = document.getElementById("sort-filter").value;
     if (sortOption === "favorite") {
         filteredProducts = filteredProducts.filter(product => product.favorite === true);
     }

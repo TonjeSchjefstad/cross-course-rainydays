@@ -30,14 +30,14 @@ header {
   border-bottom: 1px solid #545F71; 
 }
 .header-logo {
-  max-width: 100px;
+  max-width: 80px;
   height: auto;
   margin-left: 10px;
 }
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 /* Navigation constant icon buttons*/

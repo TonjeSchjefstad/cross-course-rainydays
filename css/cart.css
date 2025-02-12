@@ -15,8 +15,8 @@
 #cart-container img {
   height: 100px;
   margin-bottom: 10px;
-
 }
+
 .cart-item {
   display: flex;
   justify-content: space-between;
