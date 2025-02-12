@@ -61,6 +61,11 @@ hr {
    margin-bottom: 50px;
 }
 
+.homepage-button:hover {
+    background-color: #f8e798;
+    transition: background-color 0.3s ease;
+}
+
 @media (max-width:600px)  {
     .checkout {
         width: 100%;
