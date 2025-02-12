@@ -21,12 +21,92 @@ background-image: url(../assets/yellowjacket.jpg);
     background-image: url(../assets/ladyinyellow2.jpg );
 }
 
-@media (max-width:600px) {
-    .image-women,
-    .image-men {
-        min-height: 200px;
-    }
+.gender-shop-container {
+    display: flex;
+    justify-content: space-between;
 }
+
+.gender-shop {
+    background-color:#545F71;
+    color: white;
+    font-size: 1.2rem;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 5px;
+}
+
+#filter-container {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter {
+    padding: 8px 12px;
+    font-size: 1rem;
+    height: 40px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;
+    min-width: 150px;
+}
+
+.filter-item label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-item select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+.filter-item select:focus {
+    border-color: black;
+    outline: none;
+}
+
+#clear-filters {
+    background-color: var(--footer-bg);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.7rem 1rem;
+}
+
+#clear-filters:hover {
+    background-color: #74600D;
+}
+
+/*Loading spinner animation */
+#loading {
+    border: 8px solid lightgray;
+    border-top: 8px solid #545F71;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    display: block;
+    margin: 0 auto;
+  }
 
 .original-price {
     text-decoration: line-through;
@@ -108,93 +188,6 @@ background-image: url(../assets/yellowjacket.jpg);
     background-color: #74600D;
 }
 
-#filter-container {
-    display: flex;
-    justify-items: flex-start;
-    align-items: center;
-    gap: 10px;
-}
-
-.filter {
-    padding: 8px 12px;
-    font-size: 1rem;
-    height: 40px;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-}
-
-.filter-item {
-    display: flex;
-    flex-direction: column; 
-    margin-bottom: 15px;
-    min-width: 150px;
-}
-
-.filter-item label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.filter-item select {
-    padding: 0.5rem;
-    border-radius: 8px;
-    border: 1px solid lightgrey;
-    background-color: white;
-}
-
-.filter-item select:focus {
-    border-color: black;
-    outline: none;
-}
-
-#clear-filters {
-    background-color: var(--footer-bg);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0.7rem 1rem;
-}
-
-#clear-filters:hover {
-    background-color: #74600D;
-}
-
-.gender-shop-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.gender-shop {
-    background-color:#545F71;
-    color: white;
-    font-size: 1.2rem;
-    border: 1px solid lightgrey;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    margin: 5px;
-}
-
-/*Loading spinner animation */
-#loading {
-    border: 8px solid lightgray;
-    border-top: 8px solid #545F71;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 2s linear infinite;
-    display: block;
-    margin: 0 auto;
-  }
-
 @media (max-width: 800px) {
     #filter-container {
       flex-direction: column;
@@ -208,5 +201,12 @@ background-image: url(../assets/yellowjacket.jpg);
   
     .filter {
       padding: 10px;
+    }
+}
+
+@media (max-width:600px) {
+    .image-women,
+    .image-men {
+        min-height: 200px;
     }
 }

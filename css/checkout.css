@@ -48,67 +48,45 @@
 }
 
 
-  .summary-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
+.summary-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
 
-  .personal-information,
-  .payment-info {
-    grid-column: span 1;
-    padding: 20px;
-    max-width: 600px;
-    background-color: rgb(252, 252, 252);
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-  }
-  .personal-information form,
-  .payment-info form {
-    display: flex;
-    flex-direction: column;
-  }
-  .personal-information input,
-  .payment-info input {
-    width: 90%;
-    border: 1px solid grey;
-    border-radius: 5px;
-    font-size: 1em;
-    height: 30px;
-  }
-  .icon-container {
-    margin-bottom: 20px;
-    padding: 5px 0;
-    font-size: 2.5em;
-  }
+.personal-information,
+.payment-info {
+  grid-column: span 1;
+  padding: 20px;
+  max-width: 600px;
+  background-color: rgb(252, 252, 252);
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
 
-  @media (max-width:600px) {
-    .summary,
-    .summary-container {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-    }
-    .summary-img img{
-        max-height: 300px;
-    }
-    .personal-information {
-        order: 1;
-        max-width: 300px;
-    }
-    .payment-info {
-        order: 2;
-        max-width: 300px;
-    }
+.personal-information form,
+.payment-info form {
+  display: flex;
+  flex-direction: column;
+}
 
-    #checkout-form {
-        order: 3;
-        margin-left: 20px;
-    }
+.personal-information input,
+.payment-info input {
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 1em;
+  height: 30px;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 5px 0;
+  font-size: 2.5em;
 }
 
 .modal {
@@ -175,3 +153,28 @@
   font-size: 1rem;
 }
 
+
+@media (max-width:600px) {
+  .summary,
+  .summary-container {
+    display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .summary-img img{
+        max-height: 300px;
+    }
+    .personal-information {
+        order: 1;
+        max-width: 300px;
+    }
+    .payment-info {
+        order: 2;
+        max-width: 300px;
+    }
+
+    #checkout-form {
+        order: 3;
+        margin-left: 20px;
+    }
+}

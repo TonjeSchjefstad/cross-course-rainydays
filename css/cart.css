@@ -43,11 +43,6 @@
 }
 
 @media (max-width: 800px) {
-    .cart-item {
-      flex-direction: column;
-      align-items: center;
-    }
-
     #cart-container {
       width: 90%;
     }
@@ -55,6 +50,11 @@
     #cart-container img {
       height: 150px;
       width: 150px;
+    }
+
+    .cart-item {
+      flex-direction: column;
+      align-items: center;
     }
 
     .cart-item p {
@@ -69,5 +69,4 @@
     h3 {
       text-align: center;
     }
-
 }

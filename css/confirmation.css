@@ -9,11 +9,11 @@
     text-align: center;
     margin-bottom: 50px;
 }
-@media (max-width:600px)  {
-    .checkout {
-        width: 100%;
-    }
+
+#order-number {
+    font-weight: bold;
 }
+
 .checkout img {
     display: block;
     margin: 100px 0 auto;
@@ -47,10 +47,6 @@ hr {
     text-decoration: underline;
 }
 
-#order-number {
-    font-weight: bold;
-}
-
 .homepage-button {
    display: block;
    width: 20%;
@@ -65,8 +61,12 @@ hr {
    margin-bottom: 50px;
 }
 
-@media (max-width:600px){ 
-    .homepage-button { 
-    width: 80%;
+@media (max-width:600px)  {
+    .checkout {
+        width: 100%;
     }
+
+    .homepage-button { 
+        width: 80%;
+        }
 }
