@@ -55,6 +55,21 @@
   margin-bottom: 40px;
 }
 
+.back-button {
+  display: inline-block;
+  color: black;
+  background-color: #E8CE5F;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 1px 1px 2px grey; 
+  transition: background-color 0.3s;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 .personal-information,
 .payment-info {
   grid-column: span 1;

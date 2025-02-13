@@ -32,7 +32,7 @@ function displayProductDetails(product) {
   const container = document.getElementById("product-detail-container");
 
   let sizeOptions = product.sizes.map (size => {
-    return `<option value="${size}">${size}</option>`;
+    return `<button class="size-button" data-size="${size}">${size}</button>`;
     }).join("");
     
     //discounted product?
@@ -46,10 +46,10 @@ function displayProductDetails(product) {
         <p id="price">${isDiscounted ? `<span class="original-price">$${product.price.toFixed(2)}</span>` : ""} 
                 <span class="current-price">$${(isDiscounted ? product.discountedPrice : product.price).toFixed(2)}</span></p>
         <p id="description">${product.description}</p>
-        <label for ="size-select">Size:</label>
-            <select id="size-select">
-                <option value="select">Select Size</option> ${sizeOptions}
-            </select>
+        <label for ="size-buttons">Size:</label>
+            <div id="size-buttons">
+                ${sizeOptions}
+            </div>
         <div>
         <button id="add-to-cart" data-id="${product.id}">Add to cart</button>
         <button id="favorite-button" data-id="product-id"><i class="fa-solid fa-heart"></i></button>
@@ -57,23 +57,31 @@ function displayProductDetails(product) {
         </div>
     `;
 
+    let selectedSize = null;
 
-    document.getElementById("add-to-cart").addEventListener("click", () => {
-        addToCart(product);
+    const sizeButtons = document.querySelectorAll('.size-button');
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            sizeButtons.forEach(btn=>btn.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedSize = this.getAttribute("data-size");
+        });
     });
 
-    document.getElementById("favorite-button").addEventListener("click", () => {
+    document.getElementById("add-to-cart").addEventListener("click", function () {
+        addToCart(product, selectedSize);
+    });
+
+    document.getElementById("favorite-button").addEventListener("click", function () {
         toggleFavorites(product);
     });
 
 }
 
 //add to cart function
-function addToCart(product) {
-    const selectedSize = document.getElementById("size-select").value;
-
-    if (selectedSize === "select") {
-        alert("Please select a size");
+function addToCart(product, selectedSize) {
+    if (!selectedSize) {
+        alert ("Please select a size");
         return;
     }
 

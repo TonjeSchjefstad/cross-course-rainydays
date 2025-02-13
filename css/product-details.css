@@ -60,18 +60,23 @@ select, button {
     margin-top: 20px;
 }
 
-button {
-    background-color:var(--accent);
-    border: none;
+.size-button {
+    background-color:rgb(248, 248, 248);
+    border: 1px solid lightgray;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
     color: black;
     transition: background-color 0.3s ease;
+    margin-right: 5px;
 }
 
-button:hover {
+.size-button:hover {
     background-color: var(--accent-hover);
+}
+
+.size-button.selected {
+    background-color: var(--accent-hover)
 }
 
 .original-price {
@@ -85,6 +90,16 @@ button:hover {
     font-size: 1.2rem;
 }
 
+#favorite-button {
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+#favorite-button:hover {
+    background-color: var(--accent);
+    border: 1px solid lightgray;
+}
+
 #loading {
     border: 8px solid lightgray;
     border-top: 8px solid #545F71;
@@ -95,10 +110,6 @@ button:hover {
     display: block;
     margin: 0 auto;
   }
-
-#order-number {
-    font-weight: bold;
-}
 
 #cart-popup {
     position: fixed;
@@ -118,6 +129,18 @@ button:hover {
 
 #add-to-cart {
     width: 250px;
+    background-color:var(--accent);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+#add-to-cart:hover {
+    background-color: var(--accent-hover);
 }
 
 @media (max-width: 800px) {

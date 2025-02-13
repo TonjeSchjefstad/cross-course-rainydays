@@ -1,46 +1,6 @@
 @import url("./reset.css");
 @import url("./variables.css");
 
-.image-men, .image-women {
-    background-image: url(../assets/yellowjacket.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 400px;
-    background-position-x: center;
-    background-position-y: center;
-    position: relative;
-    box-shadow: 2px 2px 5px lightgrey;
-    margin-top: 20px;
-    padding: 20px;
-}
-.image-men  {
-background-image: url(../assets/yellowjacket.jpg);
-}
-
-.image-women {
-    background-image: url(../assets/ladyinyellow2.jpg );
-}
-
-.gender-shop-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.gender-shop {
-    background-color:#545F71;
-    color: white;
-    font-size: 1.2rem;
-    border: 1px solid lightgrey;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    margin: 5px;
-}
-
 #filter-container {
     display: flex;
     justify-items: flex-start;
