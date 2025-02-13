@@ -39,7 +39,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex-grow: 1;
   margin-left: 30px;
 }
 
@@ -66,6 +65,7 @@
   box-shadow: 1px 1px 2px grey; 
   transition: background-color 0.3s;
   font-weight: bold;
+  width: 100px;
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -170,15 +170,35 @@
 
 
 @media (max-width:600px) {
+  .back-button {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .checkout-item-details h3 {
+    font-size: 0.9em;
+  }
+
+  .size, .price {
+    margin: 0 0 5px 0;
+    font-size: 0.8em;
+  }
+
+  .checkout-item-img-wrapper {
+    height: auto;
+  }
+
   .summary,
   .summary-container {
-    display: flex;
+      display: flex;
       flex-direction: column;
       max-width: 100%;
     }
+
     .summary-img img{
         max-height: 300px;
     }
+
     .personal-information {
         order: 1;
         max-width: 300px;
@@ -190,6 +210,14 @@
 
     #checkout-form {
         order: 3;
-        margin-left: 20px;
+    }
+
+    #purchase-button {
+      display: block;
+      margin: 15px auto;
+    }
+
+    #checkout-form {
+      margin-left: 0;
     }
 }

@@ -200,7 +200,7 @@ textarea {
 
 @media (max-width:600px) {
   .cta {
-      padding: 8px 15px;
+      padding: 10px 40px;
       font-size: 1em;
   }
 }

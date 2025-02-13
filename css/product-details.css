@@ -44,12 +44,8 @@ select, button {
     cursor: pointer;
 }
 
-#size-select {
-    background-color: white;
-    color: black;
-    height: 40px;
-    width: 200px;
-    margin-left: 10px;
+label {
+    font-weight: bold;
 }
 
 #description {
@@ -58,6 +54,10 @@ select, button {
 
 #price {
     margin-top: 20px;
+}
+
+.size-buttons label {
+font-weight: bold;
 }
 
 .size-button {
@@ -144,6 +144,14 @@ select, button {
 }
 
 @media (max-width: 800px) {
+    select, button {
+        margin-top: 20px;
+    }
+
+    .size-button {
+        font-weight: 400;
+    }
+    
     #product-detail-container {
         flex-direction: column;
         align-items: center;

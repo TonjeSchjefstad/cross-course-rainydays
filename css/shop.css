@@ -163,10 +163,3 @@
       padding: 10px;
     }
 }
-
-@media (max-width:600px) {
-    .image-women,
-    .image-men {
-        min-height: 200px;
-    }
-}
