@@ -39,4 +39,4 @@ npm run start
 ```
 
 ## Contact
-[My LinkedIn page]([www.linkedin.com](https://www.linkedin.com/in/tonjeschjefstad/))
+My LinkedIn page: https://www.linkedin.com/in/tonjeschjefstad/
