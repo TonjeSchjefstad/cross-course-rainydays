@@ -3,19 +3,30 @@
 ![image](https://i.imghippo.com/files/qWU4775sBM.png)
 
 ## Description
-Rainy Days is a cross course Assigment, including design, html, css and javascript. Rainy Days is an online shop selling men's and women's rain jackets, and the clothes is designed for a range of different outdoor activities that enrich people's lives. 
+An e-commerce platform specializing in premium rain jackets for outdoor enthusiasts. The webpage is built as a cross-course project incorporating design principles, responsive layout and interactive JavaScript functionality.
 
 ### Features
-- List item 1
-- List item 2
-- List item 3
+- Product List - Browse through the complete collection
+- Product Details - See detailed product information 
+- Filtering - Filter by Gender, Color, Size and Price.
+- Cart Management -  Add productes to cart and remove items.
+- Checkout - Review cart summary
 
 ## Built With
-- Figma - Designing layout, Style Guide, UX/UI and wireframes.
-- HTML5 - Semantic and neat code
-- CSS3 - Responsive layout using Flexbox and Grid for optimal usage across all devices.
-- Vanilla JavaScript - For interactive features like displaying items, adding items to cart, deleting items from cart.
-- Noroff API - Fetching data from the API
+- Figma - For design layout, style guide, UX/UI, wireframes and prototypes.
+- HTML5 - Semantic and neat code for accessibility and SEO
+- CSS3 - Styling and responsive layout using Flexbox and Grid for optimal use across devices.
+- Vanilla JavaScript - For interactive features
+- Noroff API - API integration for product data 
+
+## Site architecture
+- Home
+- List of Jackets
+- A jacket specific page showing the jacket (product details such as the description of the product, price and add to cart button)
+- A checkout page
+- A checkout success
+- About
+- Contact
 
 ## Getting Started
 
