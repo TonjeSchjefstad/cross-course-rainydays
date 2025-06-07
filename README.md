@@ -52,4 +52,6 @@ npm run start
 ```
 
 ## Contact
-My LinkedIn page: https://www.linkedin.com/in/tonjeschjefstad/
+- My LinkedIn page: https://www.linkedin.com/in/tonjeschjefstad/
+- My GitHub Profile: https://github.com/TonjeSchjefstad
+- Email: Tonje_schjefen@hotmail.com
