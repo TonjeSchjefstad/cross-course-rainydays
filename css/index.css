@@ -158,6 +158,21 @@
     .product img {
         height: 120px;
     }
+
+    .welcome-content {
+        max-width: 500px;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.5em;
+        max-width: 400px;
+    }
+
+    .welcome-content p {
+        font-size: 1.2em;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
 }
 
 

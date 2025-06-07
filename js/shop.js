@@ -1,7 +1,6 @@
 
 let allProducts = [];
 
-//fetching products from API
 async function fetchProducts () {
     try {
         const response = await fetch ("https://v2.api.noroff.dev/rainy-days");
@@ -20,7 +19,6 @@ async function fetchProducts () {
     }
 }
 
-//make the products appear on the page
 function displayProducts (products) {
     const productList = document.getElementById("product-list");
     const loadingMessage = document.getElementById("loading");
@@ -35,12 +33,14 @@ function displayProducts (products) {
     productList.innerHTML = "";
 
     products.forEach (product => {
+        if (!product.id || !product.title) {
+            return;
+        }
+
         const productElement = document.createElement("div");
         productElement.classList.add ("product");
         
-        //discount?
         const isDiscounted = product.discountedPrice && product.discountedPrice < product.price;
-        
 
         const productLink = document.createElement("a");
         productLink.href = `product-details.html?id=${product.id}`;
@@ -61,12 +61,20 @@ function displayProducts (products) {
 }
 
 async function loadProducts () {
-    const products = await fetchProducts();
-    allProducts = products;
-    displayProducts(products);
+    const loadingMessage = document.getElementById("loading");
+
+    try {
+        const products = await fetchProducts();
+        allProducts = products;
+        displayProducts(products);
+    } catch (error) {
+        console.error("An error occurred while loading products", error.message);
+        alert("An error occurred while loading products");
+    } finally {
+        loadingMessage.style.display = "none";
+    }
 }
 
-//Filtering 
 document.getElementById("sort-filter").addEventListener("change", applyFilters);
 document.getElementById("size-filter").addEventListener("change", applyFilters);
 document.getElementById("color-filter").addEventListener("change", applyFilters);
@@ -75,67 +83,74 @@ document.getElementById("gender-filter").addEventListener("change", applyFilters
 document.getElementById("clear-filters").addEventListener("click", clearFilters);
 
 function applyFilters () {
-    let filteredProducts = allProducts;
+    try {
+        let filteredProducts = allProducts;
 
-    //size filter
-    const sizeFilter = document.getElementById("size-filter").value;
-    if (sizeFilter !== "all") {
-        filteredProducts = filteredProducts.filter (product => {
-            return product.sizes && product.sizes.map (size => size.toLowerCase()).includes(sizeFilter.toLowerCase());
-        });     
-    }
+        const sizeFilter = document.getElementById("size-filter").value;
+        if (sizeFilter !== "all") {
+            filteredProducts = filteredProducts.filter (product => {
+                return product.sizes && product.sizes.map (size => size.toLowerCase()).includes(sizeFilter.toLowerCase());
+            });     
+        }
 
-    //color filter
-    const colorFilter = document.getElementById("color-filter").value;
-    if (colorFilter !== "all") {
-        filteredProducts = filteredProducts.filter(product => {
-        return product.baseColor && product.baseColor.toLowerCase() === colorFilter.toLowerCase();
-    });
-    }
-
-    //On sale filter
-    const saleFilter = document.getElementById("sale-filter").value;
-    if (saleFilter === "yes") {
-        filteredProducts = filteredProducts.filter(product => product.onSale === true);
-    }
-    else if (saleFilter === "no") {
-        filteredProducts = filteredProducts.filter(product => product.onSale === false);
-    }
-
-    //Gender Filter
-    const genderFilter = document.getElementById("gender-filter").value;
-    if (genderFilter !== "all") {
-        filteredProducts = filteredProducts.filter(product => {
-            return product.gender && product.gender.toLowerCase() === genderFilter.toLowerCase();
+        const colorFilter = document.getElementById("color-filter").value;
+        if (colorFilter !== "all") {
+            filteredProducts = filteredProducts.filter(product => {
+            return product.baseColor && product.baseColor.toLowerCase() === colorFilter.toLowerCase();
         });
-    }
+        }
 
-    //Sorting 
-    const sortOption = document.getElementById("sort-filter").value;
-    if (sortOption === "favorite") {
-        filteredProducts = filteredProducts.filter(product => product.favorite === true);
-    }
-    else if (sortOption === "price-low") {
-        filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
-    }
-    else if (sortOption === "price-high") {
-        filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
-    }
+        const saleFilter = document.getElementById("sale-filter").value;
+        if (saleFilter === "yes") {
+            filteredProducts = filteredProducts.filter(product => product.onSale === true);
+        }
+        else if (saleFilter === "no") {
+            filteredProducts = filteredProducts.filter(product => product.onSale === false);
+        }
 
-    //Counting products
-    const productCount = document.getElementById("product-count");
-    productCount.textContent = filteredProducts.length;
+        const genderFilter = document.getElementById("gender-filter").value;
+        if (genderFilter !== "all") {
+            filteredProducts = filteredProducts.filter(product => {
+                return product.gender && product.gender.toLowerCase() === genderFilter.toLowerCase();
+            });
+        }
 
-    displayProducts(filteredProducts);
+        const sortOption = document.getElementById("sort-filter").value;
+        if (sortOption === "favorite") {
+            filteredProducts = filteredProducts.filter(product => product.favorite === true);
+        }
+        else if (sortOption === "price-low") {
+            filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
+        }
+        else if (sortOption === "price-high") {
+            filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
+        }
+
+        const productCount = document.getElementById("product-count");
+        if (productCount) {
+            productCount.textContent = filteredProducts.length;
+        }
+
+        displayProducts(filteredProducts);
+
+    } catch (error) {
+        console.error("An error occurred while applying filters", error);
+        alert("An error occurred while applying filters");
+    }
 }
-// Clear filters button 
-function clearFilters () {
-    document.getElementById("size-filter").value = "all";
-    document.getElementById("color-filter").value = "all";
-    document.getElementById("sale-filter").value = "all";
-    document.getElementById("gender-filter").value = "all";
 
-    applyFilters();
+function clearFilters () {
+    try {
+        document.getElementById("size-filter").value = "all";
+        document.getElementById("color-filter").value = "all";
+        document.getElementById("sale-filter").value = "all";
+        document.getElementById("gender-filter").value = "all";
+
+        applyFilters();
+    } catch (error) {
+        console.error("An error occurred while clearing filters", error);
+        alert("An error occurred while clearing filters");
+    }
 }
 
 loadProducts();

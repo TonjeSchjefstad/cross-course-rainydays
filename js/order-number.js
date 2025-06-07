@@ -1,5 +1,3 @@
-
-//genereate a order number in the confirmation page
 function generateOrderNumber () {
     const prefix = "FED";
     const randomNumber = Math.floor(Math.random() * 100000);

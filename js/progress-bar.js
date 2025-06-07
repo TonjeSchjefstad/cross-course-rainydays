@@ -2,6 +2,21 @@ function updateProgressBar (step) {
     const progressSteps = document.querySelectorAll(".progress-step");
     const progress = document.getElementById("progress");
 
+    if (!progress) {
+        console.error("Progress bar element not found");
+        return;
+    }
+
+    if (progressSteps.length === 0) {
+        console.error("No progress steps found");
+        return;
+    }
+
+    if (step < 1 || step > progressSteps.length) {
+        console.error("Invalid step number");
+        return;
+    }
+
     progressSteps.forEach((stepElement, index) => {
         if (index < step) {
             stepElement.classList.add("progress-step-active");

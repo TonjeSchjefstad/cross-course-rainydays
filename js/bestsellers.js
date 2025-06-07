@@ -1,6 +1,3 @@
-
-
-// Index Page - Display of bestseller items
 const bestsellerSection = document.getElementById('bestseller-list');
 const loadingMessage = document.getElementById("loading");
 
@@ -9,11 +6,15 @@ async function fetchBestsellers() {
 
     try {
         const response = await fetch("https://v2.api.noroff.dev/rainy-days");
-        const data = await response.json();
+        if (!response.ok) {
+            throw new Error("Failed to fetch bestsellers");
+        }
 
+        const data = await response.json();
         const bestsellers = data.data.filter(product => product.favorite);
         
         displayBestsellers(bestsellers);
+
     } catch (error) {
         console.error("An error occurred while fetching bestsellers", error);
     } finally {
@@ -21,11 +22,20 @@ async function fetchBestsellers() {
     }
 }
 
+function showErrorMessage() {
+    bestsellerSection.innerHTML = `
+    <div class="error-message">
+        <p>Failed to load bestsellers</p>
+        <p>Please try again later.</p>
+    </div>
+    `;
+}
+
 function displayBestsellers(products) {
     bestsellerSection.innerHTML = "";
     if (products.length === 0) {
         bestsellerSection.innerHTML = "<p>No bestsellers found</p>";
-        return
+        return;
     }
 
     products.forEach(product => {
